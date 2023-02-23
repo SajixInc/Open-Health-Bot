@@ -16,6 +16,11 @@
   <img src="https://img.shields.io/badge/Release-1.0.0-blue" />
 
  </div>
+ 
+ <div align="center">
+ <img  src="https://user-images.githubusercontent.com/92524410/220831444-d5448222-4ead-4569-9cc5-588d362875c1.gif" />
+  
+</div>
 
 
 **Why we created Open Health Bot?**
@@ -65,9 +70,15 @@ Overall, open health bots provide an innovative and effective way to deliver hea
 **Integration with health databases:** Open Health Bot can be integrated with various health databases to provide accurate and up-to-date information to users.
 
 **COWIN-vaccination Centers:** User can able to see available vaccination centers using pincode, district and state.
+<img src="https://user-images.githubusercontent.com/92524410/220832255-e3195014-e537-4f0d-93c8-d05594c07a9c.png">
+<img src="https://user-images.githubusercontent.com/92524410/220833208-908c5c87-be53-4b57-bb0d-e07ede324a6f.png">
+<img src="https://user-images.githubusercontent.com/92524410/220832276-f93ecb48-7ca4-4674-832f-cf2e4375eecf.png">
+
+
+
+
+ 
 
 <p align="center">
 <img src="https://vivifyassets.s3.ap-south-1.amazonaws.com/cropped-vivify_login.png" margin_left="100"/>
 </p>
-
-### These Bot can be used along with the [Open Health Bot API's](https://github.com/vivifyhealthcare/Open-Health-Bot-API)
