@@ -69,3 +69,5 @@ Overall, open health bots provide an innovative and effective way to deliver hea
 <p align="center">
 <img src="https://vivifyassets.s3.ap-south-1.amazonaws.com/cropped-vivify_login.png" margin_left="100"/>
 </p>
+
+### These Bot can be used along with the [Open Health Bot API's](https://github.com/vivifyhealthcare/Open-Health-Bot-API)
