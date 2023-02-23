@@ -1,0 +1,22 @@
+# version: "2.0"
+
+stories:
+
+# - story: get details of user
+#   steps:
+#   - intent: LifeStyleScore
+#   - action: utter_Take_Assessment
+
+
+- story: get depression details of user
+  steps:
+  - intent: Depression
+  - action: Zero_depression_score_assessment
+
+- story: get diabetes details of user
+  steps:
+  - intent: Diabetes
+  - action: Zero_diabetes_score_assessment
+
+
+

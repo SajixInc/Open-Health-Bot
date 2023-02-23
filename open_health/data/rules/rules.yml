@@ -1,0 +1,240 @@
+version: "2.0"
+
+rules:
+- rule: Activate open_health_form
+  steps:
+  - intent: greet
+  - action: utter_welcome_image
+  - action: utter_greet
+  - action: utter_verify
+  - action: slot_open_health_form
+  - active_loop: slot_open_health_form
+
+- rule: Submit open_health_form
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_open_health_form
+  steps:
+  # Form is deactivated
+  - action: slot_open_health_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: mobile_number_validation
+
+- rule: ask otp number
+  condition:
+  - active_loop: slot_otp_validation_form
+  steps:
+  - action: slot_otp_validation_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: validation_for_otp
+
+
+- rule: Activate_User_Registration
+  steps:
+  - intent: User_registration
+  - action: slot_user_registration_form
+  - active_loop: slot_user_registration_form
+
+- rule: Submit user_registration
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_user_registration_form
+  steps:
+  # Form is deactivated
+  - action: slot_user_registration_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: user_validation
+
+- rule: Submit gender register form
+  steps:
+  - intent: male_option
+  - action: submit_validation
+
+- rule: Submit gender_female register form
+  steps:
+  - intent: female_option
+  - action: submit_validation
+
+- rule: Submit Covid-19
+  steps:
+  - intent: Covid-19
+  - action: utter_Covid-19
+
+- rule: Submit gender_other register form
+  steps:
+  - intent: others_option
+  - action: submit_validation
+
+- rule: Submit white register form
+  steps:
+  - intent: white_option
+  - action: Ethnicity_validation
+
+- rule: Submit black american register form
+  steps:
+  - intent: Black or African American_option
+  - action: Ethnicity_validation
+
+- rule: Submit asain register form
+  steps:
+  - intent: Asian_option
+  - action: Ethnicity_validation
+
+- rule: Submit pacific islander register form
+  steps:
+  - intent: Native Hawaiian or Other Pacific Islander_option
+  - action: Ethnicity_validation
+
+- rule: Submit alaska native form
+  steps:
+  - intent: American Indian or Alaska Native_option
+  - action: Ethnicity_validation
+
+
+- rule: Activate District_form
+  steps:
+  - intent: Search by district-Name
+  - action: slot_District_form
+  - active_loop: slot_District_form
+
+- rule: Submit District_form
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_District_form
+  steps:
+  # Form is deactivated
+  - action: slot_District_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: show_Details
+
+       
+- rule: Activate Pincode_form
+  steps:
+  - intent: Search by Pincode
+  - action: slot_Pincode_form
+  - active_loop: slot_Pincode_form
+
+- rule: Submit Pincode_form
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_Pincode_form
+  steps:
+  # Form is deactivated
+  - action: slot_Pincode_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: show_Details_with_pincode
+
+
+- rule: Activate Pincode_Date_form
+  steps:
+  - intent: Search by Pincode and Date
+  - action: slot_Pincode_Date_form
+  - active_loop: slot_Pincode_Date_form
+
+- rule: Submit Pincode_Date_form
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_Pincode_Date_form
+  steps:
+  # Form is deactivated
+  - action: slot_Pincode_Date_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: show_Details_with_pincode_Date
+
+- rule: Activate Back
+  steps:
+  - intent: Back_to_Menu
+  - action: utter_Covid-19
+
+- rule: Submit Lifeeasy_Assessment
+  steps:
+  - intent: LifeStyleScore
+  - action: Zero_lifestyle_score_assessment
+
+- rule: Lifeeasy_Assessment
+  steps:
+  - intent: Lifeeasy_Assessment
+  - action: utter_Lifeeasy_Assessment
+
+
+- rule: Take Lifeeasy_Assessment
+  steps:
+  - intent: take_assessment
+  - action: First_lifestyle_score_assessment
+
+- rule: Take Lifeeasy_Assessment_Retake
+  steps:
+  - intent: Retake_assessment_first
+  - action: First_lifestyle_score_assessment
+
+- rule: Take Lifeeasy_Assessment_Retake1
+  steps:
+  - intent: Retake_assessment_first1
+  - action: First_lifestyle_score_assessmentretake
+
+- rule: Main menu
+  steps:
+  - intent: MainMenu
+  - action: utter_Main_menu
+
+
+- rule: Take depression_Assessment
+  steps:
+  - intent: take_assessment1
+  - action: First_depression_score_assessment
+
+- rule: Take depression_Assessment
+  steps:
+  - intent: take_assessment2
+  - action: First_diabetes_score_assessment
+
+- rule: Take depression_retake_Assessment
+  steps:
+  - intent: Retake_assessment_depression_first
+  - action: First_depression_score_assessmentretake
+
+- rule: Take depression_retake_Assessment1
+  steps:
+  - intent: Retake_assessment_depression_first1
+  - action: First_depression_score_assessmentretake
+
+
+- rule: Take diabetes_retake_Assessment
+  steps:
+  - intent: Retake_assessment_first12
+  - action: First_diabetes_score_assessmentretake
+
+- rule: Take diabetes_retake_Assessment
+  steps:
+  - intent: Retake_assessment_first2
+  - action: First_diabetes_score_assessmentretake
+
+- rule: Go back
+  steps:
+  - intent: assessment_options
+  - action: utter_Lifeeasy_Assessment
+
+
+- rule: back
+  steps:
+  - intent: Back
+  - action: slot_user_ethnicity_options_form
+
+

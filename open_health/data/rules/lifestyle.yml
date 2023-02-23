@@ -1,0 +1,1004 @@
+version: "2.0"
+
+rules:
+- rule: Lifestyle scoring yes1 data
+  steps:
+  - intent: scoring_yes1
+  - action: Second_lifestyle_score_assessment
+
+- rule: Lifestyle scoring no1 data
+  steps:
+  - intent: scoring_no1
+  - action: Second_lifestyle_score_assessment
+#############################################################
+- rule: Lifestyle scoring yes2 data
+  steps:
+  - intent: scoring_yes2
+  - action: Third_lifestyle_score_assessment
+
+- rule: Lifestyle scoring no2 data
+  steps:
+  - intent: scoring_no2
+  - action: Third_lifestyle_score_assessment
+#############################################################
+- rule: Lifestyle scoring yes3 data
+  steps:
+  - intent: scoring_yes3
+  - action: Fourth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring no3 data
+  steps:
+  - intent: scoring_no3
+  - action: Fourth_lifestyle_score_assessment
+#######################################################################
+- rule: Lifestyle scoring yes4 data
+  steps:
+  - intent: scoring_yes4
+  - action: Fifth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring no4 data
+  steps:
+  - intent: scoring_no4
+  - action: Fifth_lifestyle_score_assessment
+#################################################################
+- rule: Lifestyle scoring yes5 data
+  steps:
+  - intent: scoring_yes5
+  - action: Sixth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring no5 data
+  steps:
+  - intent: scoring_no5
+  - action: Sixth_lifestyle_score_assessment
+####################################################################
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_0
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_1
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_2
+  - action: Seventh_lifestyle_score_assessment
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_3
+  - action: Seventh_lifestyle_score_assessment
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_4
+  - action: Seventh_lifestyle_score_assessment
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_5
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_6
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_7
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_8
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_9
+  - action: Seventh_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes6 data
+  steps:
+  - intent: scoring_yes6_10
+  - action: Seventh_lifestyle_score_assessment
+
+
+#######################################################################################
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_0
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_1
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_2
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_3
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_4
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_5
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_6
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_7
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_8
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_9
+  - action: Eighth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes7 data
+  steps:
+  - intent: scoring_yes7_10
+  - action: Eighth_lifestyle_score_assessment
+
+
+##################################################################
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_0
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_1
+  - action: Ninth_lifestyle_score_assessment
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_2
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_3
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_4
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_5
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_6
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_7
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_8
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_9
+  - action: Ninth_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes8 data
+  steps:
+  - intent: scoring_yes8_10
+  - action: Ninth_lifestyle_score_assessment
+
+
+##################################################################
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_0
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_1
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_2
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_3
+  - action: Ten_lifestyle_score_assessment
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_4
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_5
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_6
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_7
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_8
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_9
+  - action: Ten_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes9 data
+  steps:
+  - intent: scoring_yes9_10
+  - action: Ten_lifestyle_score_assessment
+
+
+#######################################################
+- rule: Lifestyle scoring yes10 data_0
+  steps:
+  - intent: scoring_yes10_0
+  - action: Eleven_lifestyle_score_assessment
+
+
+- rule: Lifestyle scoring yes10 data_1
+  steps:
+  - intent: scoring_yes10_1
+  - action: Eleven_lifestyle_score_assessment
+
+
+
+- rule: Lifestyle scoring yes10 data_2
+  steps:
+  - intent: scoring_yes10_2
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_3
+  steps:
+  - intent: scoring_yes10_3
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_4
+  steps:
+  - intent: scoring_yes10_4
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_5
+  steps:
+  - intent: scoring_yes10_5
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_6
+  steps:
+  - intent: scoring_yes10_6
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_7
+  steps:
+  - intent: scoring_yes10_7
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_8
+  steps:
+  - intent: scoring_yes10_8
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_9
+  steps:
+  - intent: scoring_yes10_9
+  - action: Eleven_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes10 data_10
+  steps:
+  - intent: scoring_yes10_10
+  - action: Eleven_lifestyle_score_assessment
+
+
+
+############################################################################
+
+
+- rule: Lifestyle scoring yes11 data
+  steps:
+  - intent: scoring_yes11
+  - action: Twelve_lifestyle_score_assessment
+
+- rule: Lifestyle scoring no11 data
+  steps:
+  - intent: scoring_no11
+  - action: Twelve_lifestyle_score_assessment
+
+
+
+
+#################################################
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_0
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_1
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_2
+  - action: Thirteen_lifestyle_score_assessment
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_3
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_4
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_5
+  - action: Thirteen_lifestyle_score_assessment
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_6
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_7
+  - action: Thirteen_lifestyle_score_assessment
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_8
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_9
+  - action: Thirteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes12 data
+  steps:
+  - intent: scoring_yes12_10
+  - action: Thirteen_lifestyle_score_assessment
+
+####################################################
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_0
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_1
+  - action: Fourteen_lifestyle_score_assessment
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_2
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_3
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_4
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_5
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_6
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_7
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_8
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_9
+  - action: Fourteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes13 data
+  steps:
+  - intent: scoring_yes13_10
+  - action: Fourteen_lifestyle_score_assessment
+
+#########################################################
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_0
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_1
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_2
+  - action: Fifteen_lifestyle_score_assessment
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_3
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_4
+  - action: Fifteen_lifestyle_score_assessment
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_5
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_6
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_7
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_8
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_9
+  - action: Fifteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes14 data
+  steps:
+  - intent: scoring_yes14_10
+  - action: Fifteen_lifestyle_score_assessment
+
+######################################################
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_0
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_1
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_2
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_3
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_4
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_5
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_6
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_7
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_8
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_9
+  - action: Sixteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes15 data
+  steps:
+  - intent: scoring_yes15_10
+  - action: Sixteen_lifestyle_score_assessment
+
+##################################################
+
+- rule: Lifestyle scoring yes16 data
+  steps:
+  - intent: scoring_yes16
+  - action: Seventeen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes16 data
+  steps:
+  - intent: scoring_no16
+  - action: Seventeen_lifestyle_score_assessment
+
+#########################################################################
+
+
+- rule: Lifestyle scoring yes17 data
+  steps:
+  - intent: scoring_yes17
+  - action: Eighteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes17 data
+  steps:
+  - intent: scoring_no17
+  - action: Eighteen_lifestyle_score_assessment
+
+##########################################################
+
+
+- rule: Lifestyle scoring yes18 data
+  steps:
+  - intent: scoring_yes18
+  - action: Ninteen_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes18 data
+  steps:
+  - intent: scoring_no18
+  - action: Ninteen_lifestyle_score_assessment
+
+#####################################################
+
+
+- rule: Lifestyle scoring yes19 data
+  steps:
+  - intent: scoring_yes19
+  - action: Twenty_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes19 data
+  steps:
+  - intent: scoring_no19
+  - action: Twenty_lifestyle_score_assessment
+
+##################################################################################
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_0
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_1
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_2
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_3
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_4
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_5
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_6
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_7
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_8
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_9
+  - action: Twentyone_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes20 data
+  steps:
+  - intent: scoring_yes20_10
+  - action: Twentyone_lifestyle_score_assessment
+
+
+###############################################################
+
+
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_0
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_1
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_2
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_3
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_4
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_5
+  - action: Twentytwo_lifestyle_score_assessment
+  
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_6
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_7
+  - action: Twentytwo_lifestyle_score_assessment
+  
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_8
+  - action: Twentytwo_lifestyle_score_assessment
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_9
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_10
+  - action: Twentytwo_lifestyle_score_assessment
+
+##############################################################
+
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_0
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_1
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_2
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_3
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_4
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_5
+  - action: Twentytwo_lifestyle_score_assessment
+  
+- rule: Lifestyle scoring yes21 data
+  steps:
+  - intent: scoring_yes21_6
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_7
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_8
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_9
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_10
+  - action: Twentytwo_lifestyle_score_assessment
+
+- rule: Lifestyle scoring yes22 data
+  steps:
+  - intent: scoring_yes22_11
+  - action: Twentytwo_lifestyle_score_assessment
+
+
+
+###############################################################
+
+
+
+####################################depression rules#################################
+
+
+- rule: depression scoring yes1 data
+  steps:
+  - intent: depressscoring_yes1
+  - action: Second_depression_score_assessment
+
+- rule: depression scoring no1 data
+  steps:
+  - intent: depressscoring_no1
+  - action: Second_depression_score_assessment
+#############################################################
+- rule: depression scoring yes2 data
+  steps:
+  - intent: depressscoring_yes2
+  - action: Third_depression_score_assessment
+
+- rule: depression scoring no2 data
+  steps:
+  - intent: depressscoring_no2
+  - action: Third_depression_score_assessment
+#############################################################
+- rule: depression scoring yes3 data
+  steps:
+  - intent: depressscoring_yes3
+  - action: Fourth_depression_score_assessment
+
+- rule: depression scoring no3 data
+  steps:
+  - intent: depressscoring_no3
+  - action: Fourth_depression_score_assessment
+#######################################################################
+- rule: depression scoring yes4 data
+  steps:
+  - intent: depressscoring_yes4
+  - action: Fifth_depression_score_assessment
+
+- rule: depression scoring no4 data
+  steps:
+  - intent: depressscoring_no4
+  - action: Fifth_depression_score_assessment
+
+
+####################################diabetes rules#################################
+
+
+- rule: diabetes scoring yes1 data
+  steps:
+  - intent: diabetesscoring_yes1
+  - action: Second_diabetes_score_assessment
+
+- rule: diabetes scoring no1 data
+  steps:
+  - intent: diabetesscoring_no1
+  - action: Second_diabetes_score_assessment
+#############################################################
+- rule: diabetes scoring yes2 data
+  steps:
+  - intent: diabetesscoring_yes2
+  - action: Third_diabetes_score_assessment
+
+- rule: diabetes scoring no2 data
+  steps:
+  - intent: diabetesscoring_no2
+  - action: Third_diabetes_score_assessment
+#############################################################
+- rule: diabetes scoring yes3 data
+  steps:
+  - intent: diabetesscoring_yes3
+  - action: Fourth_diabetes_score_assessment
+
+- rule: diabetes scoring no3 data
+  steps:
+  - intent: diabetesscoring_no3
+  - action: Fourth_depression_score_assessment
+#######################################################################
+- rule: diabetes scoring yes4 data
+  steps:
+  - intent: diabetesscoring_yes4
+  - action: Fifth_diabetes_score_assessment
+
+- rule: diabetes scoring no4 data
+  steps:
+  - intent: diabetesscoring_no4
+  - action: Fifth_diabetes_score_assessment
+
+#########################################
+- rule: diabetes scoring yes4 data
+  steps:
+  - intent: diabetesscoring_yes5
+  - action: Sixth_diabetes_score_assessment
+
+- rule: diabetes scoring no4 data
+  steps:
+  - intent: diabetesscoring_no5
+  - action: Sixth_diabetes_score_assessment
+
+#####################retake####################################
+
+
+- rule: depression scoring yes1 dataretake
+  steps:
+  - intent: depressscoring_yes1retake
+  - action: Second_depression_score_assessmentretake
+
+- rule: depression scoring no1 dataretake
+  steps:
+  - intent: depressscoring_no1retake
+  - action: Second_depression_score_assessmentretake
+#############################################################
+- rule: depression scoring yes2 dataretake
+  steps:
+  - intent: depressscoring_yes2retake
+  - action: Third_depression_score_assessmentretake
+
+- rule: depression scoring no2 dataretake
+  steps:
+  - intent: depressscoring_no2retake
+  - action: Third_depression_score_assessmentretake
+#############################################################
+- rule: depression scoring yes3 dataretake
+  steps:
+  - intent: depressscoring_yes3retake
+  - action: Fourth_depression_score_assessmentretake
+
+- rule: depression scoring no3 dataretake
+  steps:
+  - intent: depressscoring_no3retake
+  - action: Fourth_depression_score_assessmentretake
+#######################################################################
+- rule: depression scoring yes4 dataretake
+  steps:
+  - intent: depressscoring_yes4retake
+  - action: Fifth_depression_score_assessmentretake
+
+- rule: depression scoring no4 dataretake
+  steps:
+  - intent: depressscoring_no4retake
+  - action: Fifth_depression_score_assessmentretake
+
+
+###########diabetes_retake##############
+
+- rule: diabetes scoring yes1 dataretake
+  steps:
+  - intent: diabetesscoring_yes1retake
+  - action: Second_diabetes_score_assessmentretake
+
+- rule: diabetes scoring no1 dataretake
+  steps:
+  - intent: diabetesscoring_no1retake
+  - action: Second_diabetes_score_assessmentretake
+#############################################################
+- rule: diabetes scoring yes2 dataretake
+  steps:
+  - intent: diabetesscoring_yes2retake
+  - action: Third_diabetes_score_assessmentretake
+
+- rule: diabetes scoring no2 dataretake
+  steps:
+  - intent: diabetesscoring_no2retake
+  - action: Third_diabetes_score_assessmentretake
+#############################################################
+- rule: diabetes scoring yes3 dataretake
+  steps:
+  - intent: diabetesscoring_yes3retake
+  - action: Fourth_diabetes_score_assessmentretake
+
+- rule: diabetes scoring no3 dataretake
+  steps:
+  - intent: diabetesscoring_no3retake
+  - action: Fourth_depression_score_assessmentretake
+#######################################################################
+- rule: diabetes scoring yes4 dataretake
+  steps:
+  - intent: diabetesscoring_yes4retake
+  - action: Fifth_diabetes_score_assessmentretake
+
+- rule: diabetes scoring no4 dataretake
+  steps:
+  - intent: diabetesscoring_no4retake
+  - action: Fifth_diabetes_score_assessmentretake
+
+#########################################
+- rule: diabetes scoring yes4 dataretake
+  steps:
+  - intent: diabetesscoring_yes5retake
+  - action: Sixth_diabetes_score_assessmentretake
+
+- rule: diabetes scoring no4 dataretake
+  steps:
+  - intent: diabetesscoring_no5retake
+  - action: Sixth_diabetes_score_assessmentretake

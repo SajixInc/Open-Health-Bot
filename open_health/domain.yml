@@ -1,0 +1,721 @@
+version: "2.0"
+
+intents:
+  - Search by Pincode
+  - greet
+  - happy
+  - Registration
+  - User_registration
+  - male_option
+  - female_option
+  - others_option
+  - white_option
+  - Black or African American_option
+  - Asian_option
+  - Native Hawaiian or Other Pacific Islander_option
+  - American Indian or Alaska Native_option
+  - Hispanic or Latino_option
+  - options_button
+  - ethnicity_button
+  - Covid-19
+  - Lifeeasy_Assessment
+  - LifeStyleScore
+  - Depression
+  - Diabetes
+  - Take Assessment
+  - assessment_options
+  - scoring_yes1
+  - scoring_yes2
+  - scoring_yes3
+  - scoring_yes4
+  - scoring_yes5
+  - scoring_yes1retake
+  - scoring_yes2retake
+  - scoring_yes3retake
+  - scoring_yes4retake
+  - scoring_yes5retake
+  - scoring_yes11
+  - scoring_yes10_0
+  - scoring_yes10_1
+  - scoring_yes10_2
+  - scoring_yes10_3
+  - scoring_yes10_4
+  - scoring_yes10_5
+  - scoring_yes10_6
+  - scoring_yes10_7
+  - scoring_yes10_8
+  - scoring_yes10_9
+  - scoring_yes10_10
+  - scoring_yes11retake
+  - scoring_yes10_0retake
+  - scoring_yes10_1retake
+  - scoring_yes10_2retake
+  - scoring_yes10_3retake
+  - scoring_yes10_4retake
+  - scoring_yes10_5retake
+  - scoring_yes10_6retake
+  - scoring_yes10_7retake
+  - scoring_yes10_8retake
+  - scoring_yes10_9retake
+  - scoring_yes10_10retake
+
+  - scoring_yes16
+  - scoring_yes16retake
+
+  - scoring_no1
+  - scoring_no2
+  - scoring_no3
+  - scoring_no4
+  - scoring_no5
+  - scoring_no1retake
+  - scoring_no2retake
+  - scoring_no3retake
+  - scoring_no4retake
+  - scoring_no5retake
+ 
+  - scoring_no11
+  - scoring_no11retake
+
+  - scoring_no16
+  - scoring_no16retake
+
+  - MainMenu
+  - scoring_yes7_0
+  - scoring_yes7_1
+  - scoring_yes7_2
+  - scoring_yes7_3
+  - scoring_yes7_4
+  - scoring_yes7_5
+  - scoring_yes7_6
+  - scoring_yes7_7
+  - scoring_yes7_8
+  - scoring_yes7_9
+  - scoring_yes7_10
+  - scoring_yes7_0retake
+  - scoring_yes7_1retake
+  - scoring_yes7_2retake
+  - scoring_yes7_3retake
+  - scoring_yes7_4retake
+  - scoring_yes7_5retake
+  - scoring_yes7_6retake
+  - scoring_yes7_7retake
+  - scoring_yes7_8retake
+  - scoring_yes7_9retake
+  - scoring_yes7_10retake
+  - scoring_yes8_0
+  - scoring_yes8_1
+  - scoring_yes8_2
+  - scoring_yes8_3
+  - scoring_yes8_4
+  - scoring_yes8_5
+  - scoring_yes8_6
+  - scoring_yes8_7
+  - scoring_yes8_8
+  - scoring_yes8_9
+  - scoring_yes8_10
+  - scoring_yes8_0retake
+  - scoring_yes8_1retake
+  - scoring_yes8_2retake
+  - scoring_yes8_3retake
+  - scoring_yes8_4retake
+  - scoring_yes8_5retake
+  - scoring_yes8_6retake
+  - scoring_yes8_7retake
+  - scoring_yes8_8retake
+  - scoring_yes8_9retake
+  - scoring_yes8_10retake
+  - Search by district-Name
+  - scoring_yes9_0
+  - scoring_yes9_1
+  - scoring_yes9_2
+  - scoring_yes9_3
+  - scoring_yes9_4
+  - scoring_yes9_5
+  - scoring_yes9_6
+  - scoring_yes9_7
+  - scoring_yes9_8
+  - scoring_yes9_9
+  - scoring_yes9_10
+  - scoring_yes9_0retake
+  - scoring_yes9_1retake
+  - scoring_yes9_2retake
+  - scoring_yes9_3retake
+  - scoring_yes9_4retake
+  - scoring_yes9_5retake
+  - scoring_yes9_6retake
+  - scoring_yes9_7retake
+  - scoring_yes9_8retake
+  - scoring_yes9_9retake
+  - scoring_yes9_10retake
+  - Search by Pincode and Date
+  - Back_to_Menu
+  - scoring_yes6_0
+  - scoring_yes6_1
+  - scoring_yes6_2
+  - scoring_yes6_3
+  - scoring_yes6_4
+  - scoring_yes6_5
+  - scoring_yes6_6
+  - scoring_yes6_7
+  - scoring_yes6_8
+  - scoring_yes6_9
+  - scoring_yes6_10
+  - scoring_yes6_0retake
+  - scoring_yes6_1retake
+  - scoring_yes6_2retake
+  - scoring_yes6_3retake
+  - scoring_yes6_4retake
+  - scoring_yes6_5retake
+  - scoring_yes6_6retake
+  - scoring_yes6_7retake
+  - scoring_yes6_8retake
+  - scoring_yes6_9retake
+  - scoring_yes6_10retake
+  - scoring_yes12_0
+  - scoring_yes12_1
+  - scoring_yes12_2
+  - scoring_yes12_3
+  - scoring_yes12_4
+  - scoring_yes12_5
+  - scoring_yes12_6
+  - scoring_yes12_7
+  - scoring_yes12_8
+  - scoring_yes12_9
+  - scoring_yes12_10
+  - scoring_yes12_0retake
+  - scoring_yes12_1retake
+  - scoring_yes12_2retake
+  - scoring_yes12_3retake
+  - scoring_yes12_4retake
+  - scoring_yes12_5retake
+  - scoring_yes12_6retake
+  - scoring_yes12_7retake
+  - scoring_yes12_8retake
+  - scoring_yes12_9retake
+  - scoring_yes12_10retake
+  - scoring_yes13_0
+  - scoring_yes13_1
+  - scoring_yes13_2
+  - scoring_yes13_3
+  - scoring_yes13_4
+  - scoring_yes13_5
+  - scoring_yes13_6
+  - scoring_yes13_7
+  - scoring_yes13_8
+  - scoring_yes13_9
+  - scoring_yes13_10
+  - scoring_yes14_0
+  - scoring_yes14_1
+  - scoring_yes14_2
+  - scoring_yes14_3
+  - scoring_yes14_4
+  - scoring_yes14_5
+  - scoring_yes14_6
+  - scoring_yes14_7
+  - scoring_yes14_8
+  - scoring_yes14_9
+  - scoring_yes14_10
+  - scoring_yes15_0
+  - scoring_yes15_1
+  - scoring_yes15_2
+  - scoring_yes15_3
+  - scoring_yes15_4
+  - scoring_yes15_5
+  - scoring_yes15_6
+  - scoring_yes15_7
+  - scoring_yes15_8
+  - scoring_yes15_9
+  - scoring_yes15_10
+  - scoring_yes13_0retake
+  - scoring_yes13_1retake
+  - scoring_yes13_2retake
+  - scoring_yes13_3retake
+  - scoring_yes13_4retake
+  - scoring_yes13_5retake
+  - scoring_yes13_6retake
+  - scoring_yes13_7retake
+  - scoring_yes13_8retake
+  - scoring_yes13_9retake
+  - scoring_yes13_10retake
+  - scoring_yes14_0retake
+  - scoring_yes14_1retake
+  - scoring_yes14_2retake
+  - scoring_yes14_3retake
+  - scoring_yes14_4retake
+  - scoring_yes14_5retake
+  - scoring_yes14_6retake
+  - scoring_yes14_7retake
+  - scoring_yes14_8retake
+  - scoring_yes14_9retake
+  - scoring_yes14_10retake
+  - scoring_yes15_0retake
+  - scoring_yes15_1retake
+  - scoring_yes15_2retake
+  - scoring_yes15_3retake
+  - scoring_yes15_4retake
+  - scoring_yes15_5retake
+  - scoring_yes15_6retake
+  - scoring_yes15_7retake
+  - scoring_yes15_8retake
+  - scoring_yes15_9retake
+  - scoring_yes15_10retake
+  - scoring_yes17
+  - scoring_no17
+  - scoring_yes17retake
+  - scoring_no17retake
+  - scoring_yes18
+  - scoring_no18
+  - scoring_yes18retake
+  - scoring_no18retake
+  - scoring_yes19
+  - scoring_no19
+  - scoring_yes19retake
+  - scoring_no19retake
+  - scoring_yes20_0
+  - scoring_yes20_1
+  - scoring_yes20_2
+  - scoring_yes20_3
+  - scoring_yes20_4
+  - scoring_yes20_5
+  - scoring_yes20_6
+  - scoring_yes20_7
+  - scoring_yes20_8
+  - scoring_yes20_9
+  - scoring_yes20_10
+  - scoring_yes20_0retake
+  - scoring_yes20_1retake
+  - scoring_yes20_2retake
+  - scoring_yes20_3retake
+  - scoring_yes20_4retake
+  - scoring_yes20_5retake
+  - scoring_yes20_6retake
+  - scoring_yes20_7retake
+  - scoring_yes20_8retake
+  - scoring_yes20_9retake
+  - scoring_yes20_10retake
+  - scoring_yes21_0
+  - scoring_yes21_1
+  - scoring_yes21_2
+  - scoring_yes21_3
+  - scoring_yes21_4
+  - scoring_yes21_5
+  - scoring_yes21_6
+  - scoring_yes21_7
+  - scoring_yes21_8
+  - scoring_yes21_9
+  - scoring_yes21_10
+  - scoring_yes22_0
+  - scoring_yes22_1
+  - scoring_yes22_2
+  - scoring_yes22_3
+  - scoring_yes22_4
+  - scoring_yes22_5
+  - scoring_yes22_6
+  - scoring_yes22_7
+  - scoring_yes22_8
+  - scoring_yes22_9
+  - scoring_yes22_10
+  - scoring_yes22_11
+  - take_assessment
+  - Retake_assessment_depression_first
+  - Retake_assessment_depression_first1
+  - scoring_yes21_0retake
+  - scoring_yes21_1retake
+  - scoring_yes21_2retake
+  - scoring_yes21_3retake
+  - scoring_yes21_4retake
+  - scoring_yes21_5retake
+  - scoring_yes21_6retake
+  - scoring_yes21_7retake
+  - scoring_yes21_8retake
+  - scoring_yes21_9retake
+  - scoring_yes21_10retake
+  - scoring_yes22_0retake
+  - scoring_yes22_1retake
+  - scoring_yes22_2retake
+  - scoring_yes22_3retake
+  - scoring_yes22_4retake
+  - scoring_yes22_5retake
+  - scoring_yes22_6retake
+  - scoring_yes22_7retake
+  - scoring_yes22_8retake
+  - scoring_yes22_9retake
+  - scoring_yes22_10retake
+  - scoring_yes22_11retake
+   
+
+  - Take Assessment1
+##############################depression##########################
+
+  - depressscoring_yes1
+  - depressscoring_yes2
+  - depressscoring_yes3
+  - depressscoring_yes4
+  - depressscoring_yes5
+
+  - depressscoring_no1
+  - depressscoring_no2
+  - depressscoring_no3
+  - depressscoring_no4
+  - depressscoring_no5
+  - take_assessment1
+
+####################depresion_retake#############################
+  - depressscoring_yes1retake
+  - depressscoring_yes2retake
+  - depressscoring_yes3retake
+  - depressscoring_yes4retake
+  - depressscoring_yes5retake
+
+  - depressscoring_no1retake
+  - depressscoring_no2retake
+  - depressscoring_no3retake
+  - depressscoring_no4retake
+  - depressscoring_no5retake
+
+######################diabetes#########################################
+
+#  - Take Assessment2
+  - diabetesscoring_yes1
+  - diabetesscoring_yes2
+  - diabetesscoring_yes3
+  - diabetesscoring_yes4
+
+  - diabetesscoring_no1
+  - diabetesscoring_no2
+  - diabetesscoring_no3
+  - diabetesscoring_no4
+  - take_assessment2
+  - diabetesscoring_yes5
+  - diabetesscoring_no5
+
+###########retake_diabates##################
+  - diabetesscoring_yes1retake
+  - diabetesscoring_yes2retake
+  - diabetesscoring_yes3retake
+  - diabetesscoring_yes4retake
+  - diabetesscoring_yes5retake
+
+
+  - diabetesscoring_no1retake
+  - diabetesscoring_no2retake
+  - diabetesscoring_no3retake
+  - diabetesscoring_no4retake
+  - diabetesscoring_no5retake
+  - Retake_assessment_first2
+  - Retake_assessment_first12
+
+  - Retake_assessment_first
+  - Retake_assessment_first1
+slots:
+  Answer:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  depressionAnswer:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  diabetesAnswer:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  Date:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  pincode1:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  pincode:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  District_Name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  State_Name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  MobileNumber:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  Otp:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  Age:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  options_button:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  ethnicity_button:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+responses:
+
+  utter_greet:
+  - text: Hi! This is your Lifeeazy Open Health Bot.
+
+  utter_verify:
+  - text: We have to verify the Mobile Number to start the session(Purpose of the bot)
+
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+
+  utter_welcome_image:
+  - image: https://vivifyhealthcare.atlassian.net/rest/servicedesk/1/customer/viewport-resources/portal-logo/5/14
+    text: ''
+
+  utter_Covid-19:
+  - buttons:
+    - payload: /Search by district-Name
+      title: Search by district-Name
+    - payload: /Search by Pincode
+      title: Search by Pincode
+    - payload: /Search by Pincode and Date
+      title: Search by Pincode and Date
+    - payload: /MainMenu
+      title: Go Back
+    text: Search Nearest Vaccination Center
+
+
+
+  utter_ask_MobileNumber:
+  - text: Please provide your 10 digit Mobile Number
+  
+  utter_ask_Otp:
+  - text: Please provide OTP received on your mobile to verify the session with Lifeeazy Open Health Bot
+
+  utter_ask_Age:
+  - text: Please provide me your age to assist you with the relevant health information
+
+  utter_ask_Gender:
+  - text: Please provide me your gender to assist you with the relevant health information
+
+  utter_ask_Ethnicity:
+  - text: Please provide me your ethenicity to assist you with the relevant health information
+
+  utter_ask_District_Name:
+  - text: Please Enter Your District Name
+
+  utter_ask_State_Name:
+  - text: Please Enter Your State Name
+
+  utter_ask_pincode:
+  - text: Please Enter Your Pincode
+
+  utter_ask_pincode1:
+  - text: Please Enter Your Pincode
+
+  utter_ask_Date:
+  - text: Please Enter The Date
+
+  utter_Lifeeasy_Assessment:
+  - buttons:
+    - payload: /LifeStyleScore
+      title: Lifestyle
+    - payload: /Depression
+      title: Depression
+    - payload: /Diabetes
+      title: Diabities
+    text: "What would i like to do for you?"
+
+  utter_Take_Assessment:
+  - buttons:
+    - payload: /Take Assessment
+      title: Take Assessment
+    text: "Please choose below option"
+    
+  utter_Take_Assessment1:
+  - buttons:
+    - payload: /Take Assessment1
+      title: Take Assessment
+    text: "Please choose below option"
+
+  utter_Take_Assessment2:
+    - buttons:
+        - payload: /Take Assessment2
+          title: Take Assessment
+      text: "Please choose below option"
+
+
+  utter_Main_menu:
+    - buttons:
+        - payload: /Covid-19
+          title: Covid19
+        - payload: /Lifeeasy_Assessment
+          title: Health Assessment
+        # - payload: /Back
+        #   title: Go Back
+        # - payload: /MainMenu
+        #   title: Main Menu
+      text: "Please choose below option"
+
+
+
+
+forms:
+  slot_open_health_form:
+    MobileNumber:
+    - type: from_text
+  slot_otp_validation_form:
+    Otp:
+    - type: from_text
+  slot_user_registration_form:
+    Age:
+    - type: from_text
+
+  slot_user_gender_options_form:
+    options_button:
+    - type: from_text
+  
+  slot_user_ethnicity_options_form:
+    ethnicity_button:
+    - type: from_text
+
+  slot_District_form:
+    District_Name:
+    - type: from_text
+    State_Name:
+    - type: from_text
+
+  slot_Pincode_form:
+    pincode:
+    - type: from_text
+
+  slot_Pincode_Date_form:
+    Date:
+    - type: from_text
+    pincode1:
+    - type: from_text  
+  
+
+
+actions:
+- Sixth_diabetes_score_assessment
+- mobile_number_validation
+- validation_for_otp
+- user_validation
+- submit_validation
+- Ethnicity_validation
+- show_Details
+- show_Details_with_pincode
+- show_Details_with_pincode_Date
+- utter_Take_Assessment
+- Twentytwo_lifestyle_score_assessment
+- Twentyone_lifestyle_score_assessment
+- Twenty_lifestyle_score_assessment
+- Ninteen_lifestyle_score_assessment
+- Eighteen_lifestyle_score_assessment
+- Seventeen_lifestyle_score_assessment
+- Sixteen_lifestyle_score_assessment
+- Fifteen_lifestyle_score_assessment
+- Fourteen_lifestyle_score_assessment
+- Thirteen_lifestyle_score_assessment
+- Twelve_lifestyle_score_assessment
+- Eleven_lifestyle_score_assessment
+- Ten_lifestyle_score_assessment
+- Ninth_lifestyle_score_assessment
+- Eighth_lifestyle_score_assessment
+- Seventh_lifestyle_score_assessment
+- Sixth_lifestyle_score_assessment
+- Fifth_lifestyle_score_assessment
+- Fourth_lifestyle_score_assessment
+- Third_lifestyle_score_assessment
+- Second_lifestyle_score_assessment
+- First_lifestyle_score_assessment
+- Zero_lifestyle_score_assessment
+
+
+
+- Twentytwo_lifestyle_score_assessmentretake
+- Twentyone_lifestyle_score_assessmentretake
+- Twenty_lifestyle_score_assessmentretake
+- Ninteen_lifestyle_score_assessmentretake
+- Eighteen_lifestyle_score_assessmentretake
+- Seventeen_lifestyle_score_assessmentretake
+- Sixteen_lifestyle_score_assessmentretake
+- Fifteen_lifestyle_score_assessmentretake
+- Fourteen_lifestyle_score_assessmentretake
+- Thirteen_lifestyle_score_assessmentretake
+- Twelve_lifestyle_score_assessmentretake
+- Eleven_lifestyle_score_assessmentretake
+- Ten_lifestyle_score_assessmentretake
+- Ninth_lifestyle_score_assessmentretake
+- Eighth_lifestyle_score_assessmentretake
+- Seventh_lifestyle_score_assessmentretake
+- Sixth_lifestyle_score_assessmentretake
+- Fifth_lifestyle_score_assessmentretake
+- Fourth_lifestyle_score_assessmentretake
+- Third_lifestyle_score_assessmentretake
+- Second_lifestyle_score_assessmentretake
+- First_lifestyle_score_assessmentretake
+
+
+- First_depression_score_assessment
+- Second_depression_score_assessment
+- Third_depression_score_assessment
+- Fourth_depression_score_assessment
+- Fifth_depression_score_assessment
+- First_diabetes_score_assessment
+- Second_diabetes_score_assessment
+- Third_diabetes_score_assessment
+- Fourth_diabetes_score_assessment
+- Fifth_diabetes_score_assessment
+- Zero_depression_score_assessment
+- Zero_diabetes_score_assessment
+- First_depression_score_assessmentretake
+- Second_depression_score_assessmentretake
+- Third_depression_score_assessmentretake
+- Fourth_depression_score_assessmentretake
+- Fifth_depression_score_assessmentretake
+- Zero_depression_score_assessmentretake
+- First_diabetes_score_assessmentretake
+- Second_diabetes_score_assessmentretake
+- Third_diabetes_score_assessmentretake
+- Fourth_diabetes_score_assessmentretake
+- Fifth_diabetes_score_assessmentretake
+- Sixth_diabetes_score_assessmentretake
+
+
+
+#- Fourth_depressionscore_assessment
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
