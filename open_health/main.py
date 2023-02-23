@@ -6,7 +6,7 @@ import requests
 
 def Get_By_District(district_name,state_name):
     api = "http://localhost:8000/OpenHealthBot/vaccineSlotsbydistrict/{}/{}/".format(state_name,district_name)
-    headers = {'Content-Type': 'application/json','Authorization':'Bearer <replace with your token>'}
+    headers = {'Content-Type': 'application/json','Authorization':'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(api,headers=headers)
     data=response.json()
     total=[]
@@ -26,7 +26,7 @@ print(Get_By_District("Visakhapatnam","Andhra Pradesh"))
 
 def Get_By_Pincode(pincode):
     api = "http://localhost:8000/OpenHealthBot/vaccineSlotsbypincode/{}/".format(pincode)
-    headers = {'Content-Type': 'application/json','Authorization':'Bearer <replace with your token>'}
+    headers = {'Content-Type': 'application/json','Authorization':'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(api,headers=headers)
     data=response.json()
     total=[]
@@ -45,7 +45,7 @@ def Get_By_Pincode(pincode):
 
 def Get_By_Pincode_Date(pincode,Date):
     api = "http://localhost:8000/OpenHealthBot/vaccineSlotsbypincodeanddate/{}/{}/".format(pincode,Date)
-    headers = {'Content-Type': 'application/json','Authorization':'Bearer <replace with your token>'}
+    headers = {'Content-Type': 'application/json','Authorization':'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(api,headers=headers)
     data=response.json()
     total=[]
@@ -68,7 +68,7 @@ def Get_By_Pincode_Date(pincode,Date):
 def Get_Question(id):
     api = "http://localhost:8000/UserAssessment/GetAllQuestionsLifeStyleScoringV2/"
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(url=api, headers=headers)
     data=response.json()['Result']
     qid = data[id]['id']
@@ -85,7 +85,7 @@ def Get_Question(id):
 def question_post(userId,questionid,answer,age,category,sub_category,interaction_id):
     Api = 'http://localhost:8000/OpenHealthBot/OpenHealthLifestyleScorePostAPI/'
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     # null = None
     score1 = {
         "UserId": userId,
@@ -106,7 +106,7 @@ def question_post(userId,questionid,answer,age,category,sub_category,interaction
 def question_postretake(userId,questionid,answer,age1,category,sub_category,interaction_id1):
     Api = 'http://localhost:8000/OpenHealthBot/OpenHealthLifestyleScorePostAPI/'
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     score1 = {
         "UserId": userId,
         "QuestionId": questionid,
@@ -133,7 +133,7 @@ def get_interaction(userid):
     }
     api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
     headers = {'Content-Type': 'application/json',
-                'Authorization': 'Bearer <replace with your token>'}
+                'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     
     r = requests.post(api, json=data, headers=headers)
     print("ss",r)
@@ -151,7 +151,7 @@ def get_userid(number):
 
     api = "http://localhost:8000/OpenHealthBot/"
     headers = {'Content-Type': 'application/json',
-                'Authorization': 'Bearer <replace with your token>'}
+                'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     
     phone = {
         "MobileNumber": '+91'+str(number),
@@ -182,7 +182,7 @@ def get_userid(number):
 def Get_depression_Question(id):
     api = "http://localhost:8000/UserAssessment/GetAllQuestionsDepressionV2/"
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(url=api, headers=headers)
     data=response.json()['Result']
     # print(data)
@@ -198,7 +198,7 @@ def Get_depression_Question(id):
 def depression_question_post(userId,questionid1,depressionanswer,age,category,interaction_id):
     Api = 'http://localhost:8000/OpenHealthBot/OpenHealthDepressionPostAPI/'
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     # null = None
     score1 = {
         "UserId": userId,
@@ -220,7 +220,7 @@ def depression_get_interaction(userid):
     }
     api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
     headers = {'Content-Type': 'application/json',
-               'Authorization': 'Bearer <replace with your token>'}
+               'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
 
     r = requests.post(api, json=data, headers=headers)
     # print("ss", r)
@@ -237,7 +237,7 @@ def depression_get_interaction(userid):
 def Get_diabetes_Question(id):
     api = "http://localhost:8000/UserAssessment/GetAllQuestionsDiabetesV2/"
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(url=api, headers=headers)
     data=response.json()['Result']
     # print(data)
@@ -253,7 +253,7 @@ def Get_diabetes_Question(id):
 def diabetes_question_post(userId,questionid2,diabetesanswer,age,category,interaction_id):
     Api = 'http://localhost:8000/OpenHealthBot/OpenHealthDiabetesPost/'
     headers = {'Content-Type': 'application/json',
-            'Authorization': 'Bearer <replace with your token>'}
+            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     # null = None
     score1 = {
         "UserId": userId,
@@ -275,7 +275,7 @@ def diabetes_get_interaction(userid):
     }
     api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
     headers = {'Content-Type': 'application/json',
-               'Authorization': 'Bearer <replace with your token>'}
+               'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
 
     r = requests.post(api, json=data, headers=headers)
     # print("ss", r)

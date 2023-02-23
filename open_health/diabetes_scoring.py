@@ -6,7 +6,7 @@ def get_diabetes_scoring(userId):
     # try:
     Api = 'http://localhost:8000/OpenHealthBot/OpenHealthAssessmentByUserId/{}/'.format(userId)
     headers = {'Content-Type': 'application/json',
-               'Authorization': 'Bearer <replace with your token>'}
+               'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     response = requests.get(url=Api, headers=headers)
     data = response.json()['Result']
     # print(data)

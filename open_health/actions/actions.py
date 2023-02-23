@@ -35,7 +35,7 @@ class ValidatemobilenumberForm(FormValidationAction):
             }
             api = "http://localhost:8000/OpenHealthBot/otp_generation"
             headers = {'Content-Type': 'application/json',
-                        'Authorization': 'Bearer <replace with your token>'}
+                        'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
             
             r = requests.post(api, json=phone, headers=headers)
             print(r)
@@ -138,7 +138,7 @@ class SubmitEthenicityOptionsForm(FormValidationAction):
         api = "http://localhost:8000/OpenHealthBot/demographic_generation"
 
         headers = {'Content-Type': 'application/json',
-                   'Authorization': 'Bearer <replace with your token>'}
+                   'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
 
         user = {
             "InteractionId": Id,
@@ -281,7 +281,7 @@ class ActionFirstLifestylescoring(Action):
         print(data)
         api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
         headers = {'Content-Type': 'application/json',
-                   'Authorization': 'Bearer <replace with your token>'}
+                   'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
         
         r = requests.post(api, json=data, headers=headers)
         ab = r.json()
@@ -987,7 +987,7 @@ class ActionFirstLifestylescoringretake(Action):
         print(data)
         api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
         headers = {'Content-Type': 'application/json',
-                   'Authorization': 'Bearer <replace with your token>'}
+                   'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
         
         r = requests.post(api, json=data, headers=headers)
         abc = r.json()
