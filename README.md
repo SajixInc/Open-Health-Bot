@@ -59,11 +59,7 @@ Overall, open health bots provide an innovative and effective way to deliver hea
 
   ii. [https://www.aafp.org/dam/AAFP/documents/patient_care/lifestyle-medicine/lifestyle-medicine-guide.pdf](https://www.aafp.org/dam/AAFP/documents/patient_care/lifestyle-medicine/lifestyle-medicine-guide.pdf)
 
-  c. Dipression
-
-  d. Diabities
-
-  e. Arogya Setu [https://openapi.aarogyasetu.gov.in/](https://openapi.aarogyasetu.gov.in/)
+  b. Arogya Setu [https://openapi.aarogyasetu.gov.in/](https://openapi.aarogyasetu.gov.in/)
 
 
 
@@ -82,3 +78,4 @@ Overall, open health bots provide an innovative and effective way to deliver hea
 <p align="center">
 <img src="https://vivifyassets.s3.ap-south-1.amazonaws.com/cropped-vivify_login.png" margin_left="100"/>
 </p>
+<h3>This bot can be used along with the <a href="https://github.com/vivifyhealthcare/Open-Health-Bot-API">Open Health Bot API</a></h3>
