@@ -1,10 +1,16 @@
 import requests
 import json
+from urls import url, token
+
+
 def get_lifestyle_scoring(userId):
-    Api = 'http://localhost:8000/OpenHealthBot/OpenHealthAssessmentByUserId/{}/'.format(userId)
-    headers = {'Content-Type': 'application/json',
-               'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
-    response = requests.get(url=Api, headers=headers)
+    # Api = 'http://localhost:8000/OpenHealthBot/OpenHealthAssessmentByUserId/{}/'.format(userId)
+    # headers = {'Content-Type': 'application/json',
+    #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
+    api = url+'OpenHealthBot/OpenHealthAssessmentByUserId/{}/'.format(userId)
+    headers = {'Content-Type': "application/json",'Authorization': token}
+    # response = requests.get(url=Api, headers=headers)
+    response = requests.get(api,headers=headers)
     data = response.json()['Result']
     # print(data)
     concatination = ''

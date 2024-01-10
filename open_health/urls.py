@@ -1,0 +1,5 @@
+
+# local
+
+url = "http://127.0.0.1:8000/"
+token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzEyNTUzMTkzLCJpYXQiOjE3MDQ3NzcxOTMsImp0aSI6IjAxMjc2MjYwZjI5YzQ0OGI5MTg2MmMwYzk5YzEzNzY5IiwidXNlcl9pZCI6MX0.k1LkChehl4DfbfLoZBIFTsOYP1l9e9YB5Acdnl4QbHA"
