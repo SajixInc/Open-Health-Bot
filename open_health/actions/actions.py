@@ -12,6 +12,7 @@ from main import get_userid, Get_By_District, Get_Question, question_post, depre
 from rasa_sdk import Action, Tracker, FormValidationAction
 from rasa_sdk.events import Restarted, EventType, SlotSet, FollowupAction
 from rasa_sdk.executor import CollectingDispatcher
+from urls import url, token 
 import requests
 import re
 import json
@@ -33,10 +34,14 @@ class ValidatemobilenumberForm(FormValidationAction):
                 "phone_number": '+91' + number,
 
             }
-            api = "http://localhost:8000/OpenHealthBot/otp_generation"
-            headers = {'Content-Type': 'application/json',
-                        'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
-            
+            # api = "http://localhost:8000/OpenHealthBot/otp_generation/"
+            # headers = {'Content-Type': 'application/json',
+        #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
+            api = url + "OpenHealthBot/otp_generation/"
+            headers = {'Content-Type': "application/json",'Authorization': token} 
+            print(api, 'lllllllllllll')
+            print(headers, 'ssssssssssssssssss')
+
             r = requests.post(api, json=phone, headers=headers)
             print(r)
             a = r.json()
@@ -135,11 +140,10 @@ class SubmitEthenicityOptionsForm(FormValidationAction):
             tracker: Tracker,
             domain: Dict) -> List[EventType]:
 
-        api = "http://localhost:8000/OpenHealthBot/demographic_generation"
-
-        headers = {'Content-Type': 'application/json',
-                   'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
-
+        
+        api = url + "OpenHealthBot/demographic_generation/"
+        headers = {'Content-Type': "application/json",'Authorization': token}
+        
         user = {
             "InteractionId": Id,
             "age": age_val,
@@ -147,7 +151,9 @@ class SubmitEthenicityOptionsForm(FormValidationAction):
             "ethnicity": tracker.get_slot("ethnicity_button")
         }
 
+        print(user, "lllllllllllllllllllll")
         r = requests.post(api, json=user, headers=headers)
+        print(r, 'ddddddddddddddddd')
         h = r.json()['Message']
         if h == 'Successful':
             buttons = [
@@ -279,10 +285,11 @@ class ActionFirstLifestylescoring(Action):
             "Category": "Lifestyle"
         }
         print(data)
-        api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
-        headers = {'Content-Type': 'application/json',
-                   'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
-        
+        # api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
+        # headers = {'Content-Type': 'application/json',
+        #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
+        api = url + "OpenHealthBot/OpenHealthIntractionPostApi/"
+        headers = {'Content-Type': "application/json",'Authorization': token}
         r = requests.post(api, json=data, headers=headers)
         ab = r.json()
         print(ab)
@@ -296,7 +303,7 @@ class ActionFirstLifestylescoring(Action):
         a = sub_category 
         print(question)
         print(qid)
-        print(sub_category)
+        print(sub_category,'zxcvbn1')
         
         buttons = [
             {'payload': '/scoring_yes1{"Answer":"Yes"}', 'title': "Yes"},
@@ -325,7 +332,7 @@ class ActionSecondLifestylescoring(Action):
         global b
         qid,question,sub_category=Get_Question(1)
         b = sub_category
-        print(sub_category)
+        print(sub_category,'2222222222222222')
         buttons = [
             {'payload': '/scoring_yes2{"Answer":"Yes"}', 'title': "Yes"},
             {'payload': '/scoring_no2{"Answer":"No"}', 'title': "No"},
@@ -350,7 +357,7 @@ class ActionThirdLifestylescoring(Action):
         global c
         qid,question,sub_category=Get_Question(2)
         c = sub_category
-        print(sub_category)
+        print(sub_category,"3333333333333")
         buttons = [
             {'payload': '/scoring_yes3{"Answer":"Yes"}', 'title': "Yes"},
             {'payload': '/scoring_no3{"Answer":"No"}', 'title': "No"},
@@ -376,7 +383,7 @@ class ActionFourthLifestylescoring(Action):
         global d
         qid,question,sub_category=Get_Question(3)
         d = sub_category
-        print(sub_category)
+        print(sub_category,"4444444444")
         buttons = [
             {'payload': '/scoring_yes4{"Answer":"Yes"}', 'title': "Yes"},
             {'payload': '/scoring_no4{"Answer":"No"}', 'title': "No"},
@@ -401,7 +408,7 @@ class ActionFifthLifestylescoring(Action):
         global e
         qid,question,sub_category=Get_Question(4)
         e = sub_category
-        print(sub_category)
+        print(sub_category,"55555555")
         buttons = [
             {'payload': '/scoring_yes5{"Answer":"Yes"}', 'title': "Yes"},
             {'payload': '/scoring_no5{"Answer":"No"}', 'title': "No"},
@@ -428,7 +435,7 @@ class ActionSixthLifestylescoring(Action):
 
         qid,question,sub_category=Get_Question(5)
         f = sub_category
-        print(sub_category)
+        print(sub_category,"6666666666")
         buttons = [
             {'payload': '/scoring_yes6_0{"Answer":"less than 30"}', 'title': "Less than 30"},
             {'payload': '/scoring_yes6_1{"Answer":"30"}', 'title': "30"},
@@ -464,7 +471,7 @@ class ActionSeventhLifestylescoring(Action):
 
         qid,question,sub_category=Get_Question(6)
         g = sub_category
-        print(sub_category)
+        print(sub_category,"777777777")
         buttons = [
             {'payload': '/scoring_yes7_0{"Answer":"less than 1"}', 'title': "Less than 1"},
             {'payload': '/scoring_yes7_1{"Answer":"1"}', 'title': "1"},
@@ -985,17 +992,19 @@ class ActionFirstLifestylescoringretake(Action):
             "Category": "Lifestyle"
         }
         print(data)
-        api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
-        headers = {'Content-Type': 'application/json',
-                   'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
-        
-        r = requests.post(api, json=data, headers=headers)
+        # api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
+        # headers = {'Content-Type': 'application/json',
+        #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
+        # r = requests.post(api, json=data, headers=headers)
+        api = url+"OpenHealthBot/OpenHealthIntractionPostApi/"
+        headers = {'Content-Type': "application/json",'Authorization': token}
+        response = requests.post(api, headers=headers)
         abc = r.json()
         print(abc)
         global interaction_id1
         interid1 = abc['Result']['InteractionId']
         interaction_id1 = interid1
-        print(interaction_id1)
+        print(interaction_id1, 'srujitha')
 
        
         qid,question,sub_category=Get_Question(0)
@@ -1031,8 +1040,8 @@ class ActionSecondLifestylescoringretake(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message=get_userid(tracker.get_slot('MobileNumber'))
         id1 = message
-        print(id1)
-        print(question_postretake(id1,1,tracker.get_slot("Answer"),age1,"Lifestyle",a,interaction_id1))
+        print(id1,'newwwwwwwwwwwwwww')
+        print(question_postretake(id1,1,tracker.get_slot("Answer"),age1,"Lifestyle",a,interaction_id1),'asdfghjkl')
         global b
         qid,question,sub_category=Get_Question(1)
         b = sub_category
@@ -1062,7 +1071,7 @@ class ActionThirdLifestylescoringretake(Action):
         global c
         qid,question,sub_category=Get_Question(2)
         c = sub_category
-        print(sub_category)
+        print(sub_category,'lkjhgfdsa')
         buttons = [
             {'payload': '/scoring_yes3retake{"Answer":"Yes"}', 'title': "Yes"},
             {'payload': '/scoring_no3retake{"Answer":"No"}', 'title': "No"},
@@ -1086,7 +1095,7 @@ class ActionFourthLifestylescoringretake(Action):
         global d
         qid,question,sub_category=Get_Question(3)
         d = sub_category
-        print(sub_category)
+        print(sub_category,'qwert')
         buttons = [
             {'payload': '/scoring_yes4retake{"Answer":"Yes"}', 'title': "Yes"},
             {'payload': '/scoring_no4retake{"Answer":"No"}', 'title': "No"},
