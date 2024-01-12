@@ -21,6 +21,7 @@ rules:
   - slot_was_set:
     - requested_slot: null
   # The actions we want to run when the form is submitted.
+  # - action: mobile_number_validation
   - action: mobile_number_validation
 
 - rule: ask otp number
@@ -34,11 +35,11 @@ rules:
   - action: validation_for_otp
 
 
-- rule: Activate_User_Registration
-  steps:
-  - intent: User_registration
-  - action: slot_user_registration_form
-  - active_loop: slot_user_registration_form
+# - rule: Activate_User_Registration
+#   steps:
+#   - intent: User_registration
+#   - action: slot_user_registration_form
+#   - active_loop: slot_user_registration_form
 
 - rule: Submit user_registration
   condition:

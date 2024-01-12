@@ -504,15 +504,15 @@ responses:
 
   utter_Covid-19:
   - buttons:
-    - payload: /Search by district-Name
-      title: Search by district-Name
-    - payload: /Search by Pincode
-      title: Search by Pincode
-    - payload: /Search by Pincode and Date
-      title: Search by Pincode and Date
+    # - payload: /Search by district-Name
+    #   title: Search by district-Name
+    # - payload: /Search by Pincode
+    #   title: Search by Pincode
+    # - payload: /Search by Pincode and Date
+    #   title: Search by Pincode and Date
     - payload: /MainMenu
       title: Go Back
-    text: Search Nearest Vaccination Center
+    text: Search Nearest Vaccination Center (This service is discontinued)
 
 
 
@@ -577,10 +577,10 @@ responses:
 
   utter_Main_menu:
     - buttons:
-        - payload: /Covid-19
-          title: Covid19
         - payload: /Lifeeasy_Assessment
           title: Health Assessment
+        - payload: /Covid-19
+          title: Covid19
         # - payload: /Back
         #   title: Go Back
         # - payload: /MainMenu
@@ -594,6 +594,7 @@ forms:
   slot_open_health_form:
     MobileNumber:
     - type: from_text
+    
   slot_otp_validation_form:
     Otp:
     - type: from_text
