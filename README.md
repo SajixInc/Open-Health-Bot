@@ -27,11 +27,11 @@
         
 Open Health Bot has been envisioned to make healthcare information more accessable in the most user friendly way. 
 
-**  Accessibility:** Open Health Bots provide a convenient way for people to access healthcare information and support from their homes, workplaces or on-the-go.
+- **Accessibility:** Open Health Bots provide a convenient way for people to access healthcare information and support from their homes, workplaces or on-the-go.
 
-** Affordability:** Open Health Bots has been kept open and free where people can have access to Healthcare Services and Information, making it affordable.
+- **Affordability:** Open Health Bots has been kept open and free where people can have access to Healthcare Services and Information, making it affordable.
 
-** Efficiency:** Open Health Bots can quickly provide users with basic health information and guidance, potentially reducing the need for unnecessary and unauthenticated data on the web.
+**Efficiency:** Open Health Bots can quickly provide users with basic health information and guidance, potentially reducing the need for unnecessary and unauthenticated data on the web.
 
 **- Privacy:** Open Health Bots allow users to obtain healthcare information without sharing their personal information or identity. However to keep it spam free and clean, user need to authenticate as a human. Any demographic information which has been aksed by the OHB is anonymous and required to provide relatively near to accurate information.
 
