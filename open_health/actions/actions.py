@@ -27,9 +27,9 @@ class ValidatemobilenumberForm(FormValidationAction):
     ) -> List[EventType]:
         global number
         number = tracker.get_slot('MobileNumber')
-        vnumber=re.fullmatch('[6-9][0-9]{9}',number)
-        print(vnumber)
-        if vnumber!=None:
+        
+        print(number)
+        if number!=None:
             phone = {
                 "phone_number": '+91' + number,
 
@@ -37,7 +37,7 @@ class ValidatemobilenumberForm(FormValidationAction):
             # api = "http://localhost:8000/OpenHealthBot/otp_generation/"
             # headers = {'Content-Type': 'application/json',
         #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
-            api = url + "OpenHealthBot/otp_generation/"
+            api = url + "OpenHealthBot/getidwithmobilenumber/"
             headers = {'Content-Type': "application/json",'Authorization': token} 
             print(api, 'lllllllllllll')
             print(headers, 'ssssssssssssssssss')
@@ -46,12 +46,12 @@ class ValidatemobilenumberForm(FormValidationAction):
             print(r)
             a = r.json()
             print(a)
-            otp = a['Result']['Otp']
-            global otp1
+            # otp = a['Result']['Otp']
+            # global otp1
             global Id
-            otp1 = otp
+            # otp1 = otp
             Id = a['Result']['id']
-            return [FollowupAction("slot_otp_validation_form")]
+            return [FollowupAction("slot_user_registration_form")]
         else:
             dispatcher.utter_message(text="Incorrect MobileNumber, Mobile number should be 10 digits")
             return [FollowupAction("slot_open_health_form"),SlotSet('MobileNumber', None)]
@@ -59,25 +59,25 @@ class ValidatemobilenumberForm(FormValidationAction):
 
 
 
-class ValidateotpForm(FormValidationAction):
-    def name(self) -> Text:
-        return "validation_for_otp"
+# class ValidateotpForm(FormValidationAction):
+#     def name(self) -> Text:
+#         return "validation_for_otp"
 
-    def run(
-            self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
-    ) -> List[EventType]:
+#     def run(
+#             self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict
+#     ) -> List[EventType]:
 
-        OTP = tracker.get_slot('Otp')
+#         OTP = tracker.get_slot('Otp')
 
-        if otp1 == OTP:
-            print("You have Successfully verified the session with mobile# ending with xxxx"+number[6:])
+#         if otp1 == OTP:
+#             print("You have Successfully verified the session with mobile# ending with xxxx"+number[6:])
           
-            dispatcher.utter_message(text="You have Successfully verified the session with mobile# ending with xxxx"+number[6:])
-        else:
-            print("You entered Invalid OTP")
-            dispatcher.utter_message(text="You entered Invalid OTP")
-            return [FollowupAction("slot_otp_validation_form"),SlotSet("Otp", None)]
-        return [FollowupAction("slot_user_registration_form")]
+#             dispatcher.utter_message(text="You have Successfully verified the session with mobile# ending with xxxx"+number[6:])
+#         else:
+#             print("You entered Invalid OTP")
+#             dispatcher.utter_message(text="You entered Invalid OTP")
+#             return [FollowupAction("slot_otp_validation_form"),SlotSet("Otp", None)]
+#         return [FollowupAction("slot_user_registration_form")]
 
 
 class User_Validation(FormValidationAction):
@@ -117,12 +117,13 @@ class SubmitGenderOptionsForm(FormValidationAction):
              'title': "Black"},
             {'payload': '/Asian_option{"ethnicity_button":"Asian"}', 'title': "Asian"},
             {
-                'payload': '/Native Hawaiian or Other Pacific Islander_option{"ethnicity_button":"Native Hawaiian or Other Pacific Islander"}',
-                'title': "Native Hawaiian"},
+             'payload': '/Native Hawaiian or Other Pacific Islander_option{"ethnicity_button":"Native Hawaiian or Other Pacific Islander"}',
+             'title': "Native Hawaiian"},
             {
-                'payload': '/American Indian or Alaska Native_option{"ethnicity_button":"American Indian or Alaska Native"}',
-                'title': "American Indian"},
-            {'payload': '/Hispanic or Latino_option{"ethnicity_button":"Hispanic or Latino"}',
+             'payload': '/American Indian or Alaska Native_option{"ethnicity_button":"American Indian or Alaska Native"}',
+             'title': "American Indian"},
+            {
+             'payload': '/Hispanic or Latino_option{"ethnicity_button":"Hispanic or Latino"}',
              'title': "Hispanic or Latino"}
         ]
         dispatcher.utter_message(
@@ -157,8 +158,8 @@ class SubmitEthenicityOptionsForm(FormValidationAction):
         h = r.json()['Message']
         if h == 'Successful':
             buttons = [
-            {'payload': "/Covid-19", 'title': "Covid19"},
             {'payload': "/Lifeeasy_Assessment", 'title': "Health Assessment"},
+            {'payload': "/Covid-19", 'title': "Covid19"},
             # {'payload': "/Back", 'title': "Go Back"},
             # {'payload': "/MainMenu", 'title': "Main Menu"}
             ]
@@ -236,6 +237,7 @@ class ActionZeroLifestylescoring(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         global lifestyle_score
         userId=get_userid(number)
+        print(userId,"userrrrrrrrrrrrrrr")
         lifestyle_score = get_lifestyle_scoring(userId)
         if lifestyle_score == 'No':
             buttons = [
@@ -279,12 +281,12 @@ class ActionFirstLifestylescoring(Action):
         message=get_userid(tracker.get_slot('MobileNumber'))
         
         userId=message
-        print(userId)
+        print(userId, "dddddddddddddd")
         data = {
             "UserId": userId,
             "Category": "Lifestyle"
         }
-        print(data)
+        print(data,"sssssssssss")
         # api = "http://localhost:8000/OpenHealthBot/OpenHealthIntractionPostApi/"
         # headers = {'Content-Type': 'application/json',
         #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
@@ -292,7 +294,7 @@ class ActionFirstLifestylescoring(Action):
         headers = {'Content-Type': "application/json",'Authorization': token}
         r = requests.post(api, json=data, headers=headers)
         ab = r.json()
-        print(ab)
+        print(ab,"4444444444")
         global interaction_id
         inter = ab['Result']['InteractionId']
         interaction_id = inter
@@ -326,9 +328,10 @@ class ActionSecondLifestylescoring(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         message=get_userid(tracker.get_slot('MobileNumber'))
+        print(message,"printing message")
         id1 = message
-        print(id1)
-        print(question_post(id1,1,tracker.get_slot("Answer"),age,"Lifestyle",a,interaction_id))
+        print(id1,"idddddididididid")
+        print(question_post(id1,1,tracker.get_slot("Answer"),age,"Lifestyle",a,interaction_id),"yessssssssss")
         global b
         qid,question,sub_category=Get_Question(1)
         b = sub_category
@@ -998,7 +1001,7 @@ class ActionFirstLifestylescoringretake(Action):
         # r = requests.post(api, json=data, headers=headers)
         api = url+"OpenHealthBot/OpenHealthIntractionPostApi/"
         headers = {'Content-Type': "application/json",'Authorization': token}
-        response = requests.post(api, headers=headers)
+        response = requests.post(api,json=data, headers=headers)
         abc = r.json()
         print(abc)
         global interaction_id1
@@ -1741,7 +1744,7 @@ class ActionZerodepressionscoring(Action):
                 {'payload': "/MainMenu", 'title': "Main Menu"}
             ]
             dispatcher.utter_message(
-            text="**Your depression is: **" + depression_score + ' - We suggest to Consult with General Physician for better clarity')
+            text= depression_score + ' - We suggest to Consult with General Physician for better clarity')
             dispatcher.utter_message(text="Take a quiz and get your free depression assessment", buttons=buttons)
             return []
 class Actiondepressionscoring(Action):
@@ -1873,7 +1876,7 @@ class ActionFifthdepressionscoring(Action):
             {'payload': "/MainMenu", 'title': "Main Menu"}
         ]
         dispatcher.utter_message(
-            text="**Your depression is: **" + concatination + ' - We suggest to Consult with General Physician for better clarity')
+            text= concatination + ' - We suggest to Consult with General Physician for better clarity')
         dispatcher.utter_message(text="Take a quiz and get your free personalized health assessment", buttons=buttons)
 
         return []
@@ -2069,7 +2072,7 @@ class ActionSixthdiabetesscoring(Action):
             {'payload': "/MainMenu", 'title': "Main Menu"}
         ]
         dispatcher.utter_message(
-            text="**Your diabetes is: **" + concatination + ' - We suggest to Consult with General Physician for better clarity')
+            text= concatination + ' - We suggest to Consult with General Physician for better clarity')
         dispatcher.utter_message(text="Take a quiz and get your free diabetes health assessment", buttons=buttons)
 
         return []
@@ -2234,7 +2237,7 @@ class ActionFifthdepressionscoringretake(Action):
             {'payload': "/MainMenu", 'title': "Main Menu"}
         ]
         dispatcher.utter_message(
-            text="**Your depression is: **" + concatination + ' - We suggest to Consult with General Physician for better clarity')
+            text=  concatination + ' - We suggest to Consult with General Physician for better clarity')
         dispatcher.utter_message(text="Take a quiz and get your free personalized health assessment", buttons=buttons)
 
         return []
@@ -2420,7 +2423,7 @@ class ActionSixthdiabetesscoringretake(Action):
             {'payload': "/MainMenu", 'title': "Main Menu"}
         ]
         dispatcher.utter_message(
-            text="**Your diabetes is: **" + concatination + ' - We suggest to Consult with General Physician for better clarity')
+            text= concatination + ' - We suggest to Consult with General Physician for better clarity')
         dispatcher.utter_message(text="Take a quiz and get your free personalized health assessment", buttons=buttons)
 
         return []

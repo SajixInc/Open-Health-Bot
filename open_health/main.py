@@ -101,7 +101,9 @@ def question_post(userId,questionid,answer,age,category,sub_category,interaction
     #         'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
     # null = None
     api = url+"OpenHealthBot/OpenHealthLifestyleScorePostAPI/"
+    print(api,"apiiiii")
     headers = {'Content-Type': "application/json",'Authorization': token}
+    print(headers,"its headersksjskss")
     score1 = {
         "UserId": userId,
         "QuestionId": questionid,
@@ -111,7 +113,9 @@ def question_post(userId,questionid,answer,age,category,sub_category,interaction
         "Sub_category": sub_category,
         "InteractionId": interaction_id
     }
-    r = requests.post(api, headers=headers)
+    print(score1,"asdfghjk")
+    r = requests.post(api, json=score1, headers=headers)
+    print(r,"lkjhgfds")
     a1 = r.json()
     return a1
 
