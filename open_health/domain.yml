@@ -407,6 +407,13 @@ intents:
 
   - Retake_assessment_first
   - Retake_assessment_first1
+
+########################## search health topic intents ############
+
+  - search_health_topic
+  - search_topic
+  - Query
+
 slots:
   Answer:
     type: rasa.shared.core.slots.TextSlot
@@ -486,6 +493,25 @@ slots:
     auto_fill: true
     influence_conversation: true
 
+#######################################   search health topic slots #############
+
+
+  search_health_topic:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  search_topic:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  Query:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
 responses:
 
   utter_greet:
@@ -514,7 +540,13 @@ responses:
       title: Go Back
     text: Search Nearest Vaccination Center (This service is discontinued)
 
+####################### search health topic ####################
 
+  utter_ask_Query:
+  - text: Please enter your query
+
+
+######################################3
 
   utter_ask_MobileNumber:
   - text: Please provide your 10 digit Mobile Number
@@ -579,6 +611,8 @@ responses:
     - buttons:
         - payload: /Lifeeasy_Assessment
           title: Health Assessment
+        - payload: /search_health_topic
+          title: Search health topic
         - payload: /Covid-19
           title: Covid19
         # - payload: /Back
@@ -586,6 +620,16 @@ responses:
         # - payload: /MainMenu
         #   title: Main Menu
       text: "Please choose below option"
+
+
+############################################# search health topic buttons ##############33
+
+  utter_health_topic:
+    - buttons:
+        - payload: /search_topic
+          title: Search
+      text: "Please choose below option"
+
 
 
 
@@ -625,6 +669,13 @@ forms:
     - type: from_text
     pincode1:
     - type: from_text  
+
+##########################  search health topic forms ######################
+
+  slot_ask_health_query_form:
+    Query:
+    - type: from_text
+
   
 
 
@@ -713,6 +764,10 @@ actions:
 - Fourth_diabetes_score_assessmentretake
 - Fifth_diabetes_score_assessmentretake
 - Sixth_diabetes_score_assessmentretake
+
+################ search health topic actions ###################3
+
+- get_info_about_your_query
 
 
 

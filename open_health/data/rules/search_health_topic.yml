@@ -1,0 +1,26 @@
+version: "2.0"
+
+# rules:
+# - rule: Activate open_health_form
+#   steps:
+#   - intent: search_health_topic
+#   - action: utter_health_topic
+
+
+- rule: Activate open_health_form
+  steps:
+  - intent: search_health_topic
+  - action: slot_ask_health_query_form
+  - active_loop: slot_ask_health_query_form
+
+- rule: Submit open_health_form
+  condition:
+  # Condition that form is active.
+  - active_loop: slot_ask_health_query_form
+  steps:
+  # Form is deactivated
+  - action: slot_ask_health_query_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: get_info_about_your_query

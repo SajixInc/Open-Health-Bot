@@ -12,7 +12,7 @@ def get_lifestyle_scoring(userId):
     # response = requests.get(url=Api, headers=headers)
     response = requests.get(api,headers=headers)
     data = response.json()['Result']
-    # print(data)
+    print(data)
     concatination = ''
     try:
         a = data['Life Style Scoring']['Overall_Lifestyle'][:1]

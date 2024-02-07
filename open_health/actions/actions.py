@@ -36,7 +36,7 @@ class ValidatemobilenumberForm(FormValidationAction):
             }
             # api = "http://localhost:8000/OpenHealthBot/otp_generation/"
             # headers = {'Content-Type': 'application/json',
-        #            'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
+                #    'Authorization': 'Bearer <replace the token with open health bot Api (https://github.com/vivifyhealthcare/Open-Health-Bot-API) >'}
             api = url + "OpenHealthBot/getidwithmobilenumber/"
             headers = {'Content-Type': "application/json",'Authorization': token} 
             print(api, 'lllllllllllll')
@@ -159,6 +159,7 @@ class SubmitEthenicityOptionsForm(FormValidationAction):
         if h == 'Successful':
             buttons = [
             {'payload': "/Lifeeasy_Assessment", 'title': "Health Assessment"},
+            {'payload': "/search_health_topic", 'title': "Search health topic"},
             {'payload': "/Covid-19", 'title': "Covid19"},
             # {'payload': "/Back", 'title': "Go Back"},
             # {'payload': "/MainMenu", 'title': "Main Menu"}
@@ -239,6 +240,7 @@ class ActionZeroLifestylescoring(Action):
         userId=get_userid(number)
         print(userId,"userrrrrrrrrrrrrrr")
         lifestyle_score = get_lifestyle_scoring(userId)
+        print(lifestyle_score,"jhgfdsshyrdsx")
         if lifestyle_score == 'No':
             buttons = [
             {'payload': "/take_assessment", 'title': "Take Assessment"},
@@ -1723,7 +1725,7 @@ class ActionZerodepressionscoring(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # global userId
+        global userId
         global lifestyle_score
         userId=get_userid(number)
         depression_score = get_depression_scoring(userId)
@@ -1914,7 +1916,7 @@ class ActionZerodiabetesscoring(Action):
                 {'payload': "/MainMenu", 'title': "Main Menu"}
             ]
             dispatcher.utter_message(
-            text="**Your diabetes is: **" + diabetes_score + ' - We suggest to Consult with General Physician for better clarity')
+            text= diabetes_score + ' - We suggest to Consult with General Physician for better clarity')
             dispatcher.utter_message(text="Take a quiz and get your free diabetes assessment", buttons=buttons)
             return []
 
