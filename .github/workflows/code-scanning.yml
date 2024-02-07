@@ -1,0 +1,20 @@
+name: Code Scanning
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  code_scanning:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Code Scanning
+      uses: github/codeql-action/analyze@v2
+      with:
+        # The path to the CodeQL queries
+        queries: ./codeql-queries
