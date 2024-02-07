@@ -372,7 +372,7 @@ def diabetes_get_interaction(userid):
 import requests
 
 def get_details(query):
-    api_key = 'AIzaSyCh5jPsn1NoB1B9AVL9PvFRS-s13QNnis4'
+    api_key = '##################################################'
     cx = '62398b8d5473f42ae'
     url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={cx}&q={query}'
     
