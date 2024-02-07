@@ -328,52 +328,14 @@ def diabetes_get_interaction(userid):
     # print(interaction_id2)
     return interaction_id2
 # print(diabetes_get_interaction(7))
-
-
-
-
-
-###################################### Search helath topic function ###############################
-
-
-# import requests
-# import webbrowser
-# import json
-# def get_details(query):
-#     Api = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyCbriDRW2OgmHwhkgmeJg5sTm8WH5Q70Ic&cx=31bfd5557d3024a45={}'.format(query)
-#     print(Api)
-#     response = requests.get(url=Api)
-#     print(response)
-#     count=response.json()['queries']['request'][0]['count']
-#     title=response.json()['items'][0]['link']
-#     print(title)
-#     print(count)
-#     message=""
-#     if count<5:
-#         for i in range(count):
-#             link=response.json()['items'][i]['link']
-#             title=response.json()['items'][i]['title']
-#             link1 = link + '\n'
-#             message +='['+title+']'+'('+link1+')' + '\n' + '\n'
-#         return message
-    
-#     else:
-#         for i in range(5):
-#             link=response.json()['items'][i]['link']
-#             title=response.json()['items'][i]['title']
-#             link1 = link + '\n'
-#             message +='['+title+']'+'('+link1+')' + '\n' + '\n'
-#         return message
-    
-
-# # print(get_details("covid"))    
+   
 
 
 import requests
 
 def get_details(query):
-    api_key = 'AIzaSyCh5jPsn1NoB1B9AVL9PvFRS-s13QNnis4'
-    cx = '62398b8d5473f42ae'
+    api_key = 'pass the your search engine api_key'
+    cx = 'pass the your search engine id'
     url = f'https://www.googleapis.com/customsearch/v1?key={api_key}&cx={cx}&q={query}'
     
     try:
